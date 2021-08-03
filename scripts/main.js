@@ -1,4 +1,14 @@
-let userName = prompt("Enter Your Name");
+let userName = getUserName();
+function getUserName()
+{
+    let userName = prompt("Enter Your Name");
+    if(!userName)
+    {
+        getUserName();
+    }
+    else
+    return userName;
+}
 document.getElementById('userName').textContent = 'Welcome '+userName;
 const myImage = document.querySelector('img');
 let flag = false;
